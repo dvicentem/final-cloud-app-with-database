@@ -104,7 +104,7 @@ class Enrollment(models.Model):
 class Question(models.Model):
     question_text = models.CharField(max_length=500)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    grade = models.BooleanField(default=False)
+    grade = models.FloatField(default=0)
     # Foreign key to lesson
     # question text
     # question grade/mark
